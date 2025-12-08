@@ -23,7 +23,7 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # SPL
-BOOT_SECURITY_PATCH := 2025-03-01
+BOOT_SECURITY_PATCH := 2025-02-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Inherit from mt6983-common
@@ -31,6 +31,3 @@ include device/xiaomi/mt6983-common/BoardConfigCommon.mk
 
 # Inherit the proprietary files
 include vendor/xiaomi/matisse/BoardConfigVendor.mk
-
-# Avium Setting
-include device/xiaomi/matisse/avium_common.mk
