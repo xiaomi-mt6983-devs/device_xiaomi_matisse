@@ -22,10 +22,12 @@ PRODUCT_MODEL := 22011211C
 
 PRODUCT_SYSTEM_NAME := matisse
 PRODUCT_SYSTEM_DEVICE := matisse
+WITH_GMS := true
+TARGET_GMS_TYPE := FULL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="matisse-user 14 UP1A.231005.007 V816.0.14.0.ULKCNXM release-keys" \
-    BuildFingerprint=Redmi/matisse/matisse:14/UP1A.231005.007/OS2.0.2.0.ULKCNXM:user/release-keys \
+    BuildDesc="matisse-user 14 UP1A.231005.007 V816.0.14.0.ULNCNXM release-keys" \
+    BuildFingerprint=Redmi/matisse/matisse:14/UP1A.231005.007/OS2.0.2.0.ULNCNXM:user/release-keys \
 
 
 # Avium Setting
