@@ -26,8 +26,5 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 BOOT_SECURITY_PATCH := 2025-03-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
-# Inherit from mt6983-common
-include device/xiaomi/mt6983-common/BoardConfigCommon.mk
-
 # Inherit the proprietary files
 include vendor/xiaomi/matisse/BoardConfigVendor.mk
