@@ -20,4 +20,4 @@ It was released in March 2022.
 |                  Camera | 108MP (Primary) 8MP (Ultra-wide) 2MP (Telephoto-macro)      |
 
 ## Device Picture
-![Redmi K50 Pro](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1653381863.47942179.png)
+![Redmi K50 Pro](https://cdn.cnbj1.fds.api.mi-img.com/product-images/redmik50proul0wzg/spec-color2.jpg)
