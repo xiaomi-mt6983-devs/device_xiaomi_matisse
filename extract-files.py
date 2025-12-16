@@ -9,6 +9,7 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -19,8 +20,9 @@ from extract_utils.main import (
 
 namespace_imports = [
     'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
     'hardware/xiaomi',
-    'vendor/xiaomi/mt6983-common',
+    'vendor/xiaomi/matisse'
 ]
 
 lib_fixups: lib_fixups_user_type = {
@@ -55,8 +57,7 @@ module = ExtractUtilsModule(
 
 )
 
+
 if __name__ == '__main__':
-    utils = ExtractUtils.device_with_common(
-        module, 'mt6983-common', module.vendor
-    )
+    utils = ExtractUtils.device(module)
     utils.run()
