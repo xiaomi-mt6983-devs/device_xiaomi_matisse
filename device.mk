@@ -36,7 +36,13 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayMatisse \
     SettingsResOverlayMatisse \
     SystemUIOverlayMatisse \
-    WifiResOverlayMatisse
+    WifiResOverlayMatisse \
+    FrameworksResOverlayMT6983 \
+    CarrierConfigResOverlayMT6983 \
+    SettingsResOverlayMT6983 \
+    SystemUIOverlayMT6983 \
+    WifiResOverlayMT6983 \
+    TetheringResOverlayMT6983
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
