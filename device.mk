@@ -44,6 +44,13 @@ PRODUCT_PACKAGES += \
     WifiResOverlayMT6983 \
     TetheringResOverlayMT6983
 
+PRODUCT_PACKAGES += \
+    LineageApertureOverlayMT6983 \
+    LineageSDKOverlayMT6983 \
+    LineageSettingsOverlayMT6983 \
+    LineageSystemUIOverlayMT6983 \
+    LineageDialerMT6983
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Platform
