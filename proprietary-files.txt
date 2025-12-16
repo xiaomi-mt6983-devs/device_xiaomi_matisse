@@ -295,7 +295,7 @@ vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/mpe.conf
 vendor/etc/slp_conf
 vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
-vendor/etc/vintf/manifest/gnss@2.1-service-mediatek.xml
+vendor/etc/vintf/manifest/gnss@2.1-service.xml;SYMLINK=vendor/etc/vintf/manifest/gnss@2.1-service-mediatek.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
@@ -375,18 +375,12 @@ vendor/etc/init/vendor.xiaomi.sensor.citsensorservice@1.1-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@1.1-service.xml
 vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so
 vendor/lib64/libssccalapi.so
-vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.0.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
-
-# Sensors configs
-vendor/etc/sensors/lightSensorCali.json
-vendor/etc/sensors/lightSensorConfig.json
 
 # Thermal (Xiaomi)
 vendor/bin/mi_thermald
 vendor/lib64/hw/thermal_hal.so
 vendor/etc/thermal-4k.conf
-vendor/etc/thermal-8k.conf
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-chg-only.conf
 vendor/etc/thermal-class0.conf
@@ -402,7 +396,6 @@ vendor/etc/thermal-per-huanji.conf
 vendor/etc/thermal-per-navigation.conf
 vendor/etc/thermal-per-normal.conf
 vendor/etc/thermal-per-video.conf
-vendor/etc/thermal-per-yuanshen.conf
 vendor/etc/thermal-phone.conf
 vendor/etc/thermal-region-map.conf
 vendor/etc/thermal-tgame.conf
