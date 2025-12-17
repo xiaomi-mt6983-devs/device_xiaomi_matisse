@@ -92,10 +92,6 @@ PRODUCT_PACKAGES += \
     com.android.hardware.boot \
     android.hardware.boot-service.default_recovery
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth-service.mediatek
-
 # ConsumerIR
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
@@ -182,15 +178,14 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayMatisse \
     NfcOverlayMatisse \
     SettingsProviderOverlayMatisse \
-    SystemUIResOverlayMatisse \
+    SystemUIOverlayMatisse \
     WifiResOverlayMatisse \
     SettingsResOverlayMatisse \
     FrameworksResOverlayMT6983 \
     SettingsOverlayMT6983 \
-    SettingsProviderResOverlayMT6983 \
     SystemUIOverlayMT6983 \
     WifiResOverlayMT6983 \
-    SettingsResOverlayMT6983
+    CarrierConfigOverlayMT6983
 
 PRODUCT_PACKAGES += \
     LineageApertureOverlayMT6983 \
@@ -198,7 +193,7 @@ PRODUCT_PACKAGES += \
     LineageDialerMT6983 \
     LineageSDKOverlayMT6983 \
     PowerOffAlarmOverlayMT6983\
-    LineageSystemUIMT6983
+    LineageSystemUIOverlayMT6983
 
 # Parts
 PRODUCT_PACKAGES += \
@@ -249,18 +244,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.engineermode.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.engineermode.xml
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub \
     libmtkperf_client_vendor \
     libmtkperf_client
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 $(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-xiaomi)
 
@@ -279,15 +268,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePkgs
-
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6983 \
     fstab.mt6983.vendor_ramdisk \
-    fstab.zram \
     init.batterysecret.rc \
     init.connectivity.rc \
     init.fingerprint.rc \
@@ -300,7 +284,6 @@ PRODUCT_PACKAGES += \
     init.project.rc \
     init.sensor_2_0.rc \
     ueventd.mt6983.rc \
-    init.matisse.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.mt6983.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6983.rc
@@ -361,9 +344,6 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.mediatek
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/matisse/matisse-vendor.mk)
