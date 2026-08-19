@@ -43,7 +43,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Platform
 TARGET_BOARD_PLATFORM := mt6983
 
-
 # Rootdir
 PRODUCT_PACKAGES += \
     init.project.rc

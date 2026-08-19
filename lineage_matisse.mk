@@ -24,11 +24,11 @@ PRODUCT_SYSTEM_NAME := matisse
 PRODUCT_SYSTEM_DEVICE := matisse
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="matisse-user 14 UP1A.231005.007 V816.0.14.0.ULNCNXM release-keys" \
+    BuildDesc="matisse-user 14 UP1A.231005.007 OS2.0.2.0.ULNCNXM release-keys" \
     BuildFingerprint=Redmi/matisse/matisse:14/UP1A.231005.007/OS2.0.2.0.ULNCNXM:user/release-keys \
 
 
-# Avium Setting
-include device/xiaomi/matisse/avium_common.mk
+# Inherit GApps if available
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 
